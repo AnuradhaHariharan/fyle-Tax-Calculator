@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Tax Calculation Form</h1>
+        <form id="tax-form">
+            <!-- Gross Annual Income -->
+            <div class="form-group">
+                <label for="gross-income">Enter Gross Annual Income:</label>
+                <input type="number" id="gross-income" name="gross-income" min="0" step="0.01">
+                <span class="error-icon" id="income-error-icon" title="Invalid input">!</span>
+            </div>
+
+            <!-- Extra Income -->
+            <div class="form-group">
+                <label for="extra-income">Enter Extra Income:</label>
+                <input type="number" id="extra-income" name="extra-income" min="0" step="0.01">
+                <span class="error-icon" id="extra-error-icon" title="Invalid input">!</span>
+            </div>
+
+            <!-- Age Group -->
+            <div class="form-group">
+                <label for="age-group">Enter Age Group:</label>
+                <select id="age-group" name="age-group">
+                    <option value="">Select an age group</option>
+                    <option value="<40">Under 40</option>
+                    <option value="40-60">40 to 59</option>
+                    <option value="≥60">60 and above</option>
+                </select>
+                <span class="error-icon" id="age-error-icon" title="Age group is mandatory">!</span>
+            </div>
+
+            <!-- Total Applicable Deductions -->
+            <div class="form-group">
+                <label for="deductions">Enter Total Applicable Deductions:</label>
+                <input type="number" id="deductions" name="deductions" min="0" step="0.01">
+                <span class="error-icon" id="deductions-error-icon" title="Invalid input">!</span>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="button" id="submit-button">Submit</button>
+        </form>
+
+        <!-- Modal -->
+        <div id="tax-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal" id="close-modal">&times;</span>
+                <h2>Calculated Tax</h2>
+                <p id="tax-amount">The calculated tax amount is: </p>
+            </div>
+        </div>
+    </div>
+
+   
+    <script src="script.js"></script>
+</body>
+
+</html>

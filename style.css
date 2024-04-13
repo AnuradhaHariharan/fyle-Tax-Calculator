@@ -93,13 +93,16 @@ button:active {
     align-items: center;
 }
 
+
 .modal-content {
     background-color: #fff;
-    padding: 25px; /* Increased padding */
-    border-radius: 0; /* Set border radius to 0 for a square shape */
+    padding: 25px;
+    border-radius: 0; 
     max-width: 500px;
     text-align: center;
+    position: relative; 
 }
+
 
 .close-modal {
     cursor: pointer;
@@ -110,6 +113,6 @@ button:active {
     right: 20px;
 }
 
-close-modal:hover {
-    color: #333;
+.close-modal:hover {
+    color: #333; /* Change color on hover */
 }
